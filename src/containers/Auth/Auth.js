@@ -12,11 +12,12 @@ const Auth = props => {
     const [controls, setControls] = useState({ email: { elementType: 'input', elementConfig: { type: 'email', placeholder: 'Mail Address' }, value: '', validation: { required: true, isEmail: true }, valid: false, touched: false }, password: { elementType: 'input', elementConfig: { type: 'password', placeholder: 'Password' }, value: '', validation: { required: true, minLength: 6 }, valid: false, touched: false } });
     const [isSignup, setIsSignup] = useState(true);
 
+    const { buildingBurger, authRedirectPath, onSetAuthRedirectPath } = props;
     useEffect(() => {
-        if (!props.buildingBurger && props.authRedirectPath !== '/') {
-            props.onSetAuthRedirectPath();
+        if (!buildingBurger && authRedirectPath !== '/') {
+            onSetAuthRedirectPath();
         }
-    }, []);
+    }, [buildingBurger, authRedirectPath, onSetAuthRedirectPath]);
 
     const checkValidity = (value, rules) => {
         let isValid = true;
