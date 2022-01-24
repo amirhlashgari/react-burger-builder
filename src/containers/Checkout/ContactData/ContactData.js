@@ -9,7 +9,7 @@ import axios from '../../../axios-orders';
 import withErrorHandler from '../../../hoc/withErrorHandler/withErrorHandler';
 import * as actions from '../../../store/actions/index';
 
-const contactData = props => {
+const ContactData = props => {
     const [orderForm, setOrderForm] = useState({ name: { elementType: 'input', elementConfig: { type: 'text', placeholder: 'Your Name' }, value: '', validation: { required: true }, valid: false, touched: false }, street: { elementType: 'input', elementConfig: { type: 'text', placeholder: 'Street' }, value: '', validation: { required: true }, valid: false, touched: false }, zipCode: { elementType: 'input', elementConfig: { type: 'text', placeholder: 'ZIP Code' }, value: '', validation: { required: true, minLength: 5, maxLength: 5, isNumeric: true }, valid: false, touched: false }, country: { elementType: 'input', elementConfig: { type: 'text', placeholder: 'Country' }, value: '', validation: { required: true }, valid: false, touched: false }, email: { elementType: 'input', elementConfig: { type: 'email', placeholder: 'Your E-Mail' }, value: '', validation: { required: true, isEmail: true }, valid: false, touched: false }, deliveryMethod: { elementType: 'select', elementConfig: { options: [{ value: 'cheapest', displayValue: 'Cheapest' }, { value: 'fastest', displayValue: 'Fastest' }] }, value: 'cheapest', validation: {}, valid: true } });
     const [formIsValid, setFormIsValid] = useState(false);
 
@@ -123,4 +123,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(withErrorHandler(contactData, axios));
+export default connect(mapStateToProps, mapDispatchToProps)(withErrorHandler(ContactData, axios));

@@ -19,7 +19,7 @@ const Auth = React.lazy(() => {
   return import('./containers/Auth/Auth');
 });
 
-const app = props => {
+const App = props => {
 
   useEffect(() => {
     props.onTryAutoSignup();
@@ -66,4 +66,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(app));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
