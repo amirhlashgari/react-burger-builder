@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import Aux from '../../hoc/Aux/Aux';
@@ -17,7 +17,7 @@ const BurgerBuilder = props => {
     const dispatch = useDispatch();
     const onIngredientAdded = (ingName) => dispatch(actions.addIngredient(ingName));
     const onIngredientRemoved = (ingName) => dispatch(actions.removeIngredient(ingName));
-    const onInitIngredients = () => dispatch(actions.initIngredients());
+    const onInitIngredients = useCallback(() => dispatch(actions.initIngredients()), [dispatch]);
     const onInitPurchase = () => dispatch(actions.purchaseInit());
     const onSetAuthRedirectPath = (path) => dispatch(actions.setAuthRedirectPath(path));
 
