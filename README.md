@@ -1,7 +1,7 @@
 # React Burger Builder
 
 ## Description
-this repository contains my coding process while coding along with react burger builder course academind by [Maximilian Schwarzmüller](https://www.linkedin.com/in/maximilian-schwarzmueller/).
+this repository contains my training process while coding along with react burger builder course academind by [Maximilian Schwarzmüller](https://www.linkedin.com/in/maximilian-schwarzmueller/).
 
 ## Usage
 
