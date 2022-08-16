@@ -9,9 +9,10 @@ this repository contains my training process while coding along with react burge
 you should start with `npm install` to create node_modules folder according to defined packages in `package.json` file.
 
 ### Used Stacks
-    - ReactJs as Frontend
-    - Firebase as Backend (uses built-in authentication of firebase)
-    - Redux as state management system
+
+  - ReactJs as Frontend
+  - Firebase as Backend (uses built-in authentication of firebase)
+  - Redux as state management system
 
 ### Folder Structure
 
