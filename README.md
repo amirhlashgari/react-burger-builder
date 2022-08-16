@@ -34,5 +34,7 @@ react-burger-builder/     # Root directory
 ### Start
 
 `npm run build`: builds the app for production to the `build` folder.\
+
 `npm start`: run project in `http://localhost:3000/`.\
-`npm test`: launches the test runner in the interactive watch mode.\
+
+`npm test`: launches the test runner in the interactive watch mode.
